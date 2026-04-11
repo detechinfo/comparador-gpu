@@ -48,7 +48,7 @@
 // Para adicionar uma GPU nova: copie o bloco de uma GPU existente
 // ----------------------------------------------------------------
 
-const GG = {
+var GG = {
 
   // NVIDIA ── ASUS RTX 5090 TUF 32 GB
   "ASUS RTX 5090 TUF 32 GB": {
@@ -425,7 +425,7 @@ const GG = {
 // shaders = número de shaders/CUDA cores
 // ----------------------------------------------------------------
 
-const GS = {
+var GS = {
 
   "ASUS RTX 5090 TUF 32 GB": { "brand": "NVIDIA", "tdp": 575, "arch": "Blackwell", "proc": "4nm", "vram": "32GB GDDR7", "bus": "512-bit", "bw": "1792", "boost": 2407, "shaders": 21760, "launch": "Jan/2025" },
   "Arc A580 8 GB": { "brand": "Intel", "tdp": 175, "arch": "Alchemist", "proc": "6nm", "vram": "8GB GDDR6", "bus": "256-bit", "bw": "512", "boost": 2000, "shaders": 3072, "launch": "Nov/2023" },
@@ -489,7 +489,7 @@ const GS = {
 // r1080 = 1080p  |  r4k = 4K
 // ----------------------------------------------------------------
 
-const CG = {
+var CG = {
 
   // AMD ── AMD Ryzen 5 5500
   "AMD Ryzen 5 5500": {
@@ -665,7 +665,7 @@ const CG = {
 // 3DMark, 7-Zip, CineBENCH, WinRAR, CPU-Z = pontuação (maior = melhor)
 // ----------------------------------------------------------------
 
-const CS = {
+var CS = {
 
   "AMD Ryzen 5 5500": { "3DMark": 30895.0, "7-Zip": 59727.0, "CPU-Z Bench": 4551.0, "CineBENCH": 10322.0, "WinRAR": 19643.0 },
   "AMD Ryzen 5 5500X3D": { "3DMark": 55692.0, "7-Zip": 66434.0, "CPU-Z Bench": 4222.0, "CineBENCH": 547.0, "WinRAR": 31457.0 },
@@ -706,7 +706,7 @@ const CS = {
 // V-Ray Benchmark, x264 FULL HD = pontos/fps (MAIOR = melhor)
 // ----------------------------------------------------------------
 
-const CP = {
+var CP = {
 
   "AMD Ryzen 5 5500": { "AIDA64": 68.8, "Adobe Premiere Pro": 792.0, "Blender": 241.0, "V-Ray Benchmark": 7225.0, "x264 FULL HD": 53.04 },
   "AMD Ryzen 5 5500X3D": { "Blender": 144.0, "V-Ray Benchmark": 7622.0 },
@@ -746,7 +746,7 @@ const CP = {
 // base/boost = GHz  |  l3 = cache L3 em MB  |  tdp = Watts
 // ----------------------------------------------------------------
 
-const CSPEC = {
+var CSPEC = {
 
   "AMD Ryzen 5 5500": { "brand": "AMD", "arch": "Zen 3", "socket": "AM4", "cores": "6P", "threads": 12, "base": 3.6, "boost": 4.2, "l3": 16, "tdp": 65, "mem": "DDR4-3200", "launch": "Abr/2022" },
   "AMD Ryzen 5 5500X3D": { "brand": "AMD", "arch": "Zen 3 3D V-Cache", "socket": "AM4", "cores": "6P", "threads": 12, "base": 3.6, "boost": 4.5, "l3": 32, "tdp": 65, "mem": "DDR4-3200", "launch": "Mar/2024" },
