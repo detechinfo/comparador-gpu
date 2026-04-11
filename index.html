@@ -779,6 +779,35 @@ var CSPEC = {
   "Intel Core i9-12900K": { "brand": "Intel", "arch": "Alder Lake", "socket": "LGA1700", "cores": "8P+8E", "threads": 24, "base": 3.2, "boost": 5.2, "l3": 30, "tdp": 125, "mem": "DDR5-4800", "launch": "Nov/2021" },
 
 };
+
+// Paleta de cores para comparação (até 5 componentes simultâneos)
+var POS = ['#00e5ff', '#ff6b1a', '#39ff14', '#ffd60a', '#bf5af2'];
+
+// Média de FPS de um objeto {jogo: fps, ...}
+function avg(obj) {
+  if (!obj) return 0;
+  var vals = Object.values(obj);
+  if (!vals.length) return 0;
+  return parseFloat((vals.reduce(function(a, b) { return a + b; }, 0) / vals.length).toFixed(1));
+}
+
+// Cor da marca
+function bc(brand) {
+  if (!brand) return '#555';
+  var b = brand.toLowerCase();
+  if (b === 'nvidia') return '#76b900';
+  if (b === 'intel') return '#0071c5';
+  if (b === 'amd') return '#ed1c24';
+  return '#555';
+}
+
+// Nome curto (remove prefixo de fabricante)
+function sn(name) {
+  if (typeof name !== 'string') return String(name);
+  return name.replace(/^(ASUS|Gigabyte|MSI|Sapphire|XFX|PowerColor|Zotac|PNY|Palit|EVGA|Colorful)\s+/i, '')
+             .replace(/^(NVIDIA GeForce|AMD Radeon)\s+/i, '');
+}
+
   </script>
 
   <!-- Código do comparador (não editar) -->
