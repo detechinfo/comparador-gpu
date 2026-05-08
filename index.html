@@ -140,9 +140,11 @@
     /* ─── Fade-in na entrada ─── */
     #root > div{animation:fade-in .4s ease both}
 
-    /* ─── Esconde gráfico de barras (GPU e CPU), mantém cards de jogo ─── */
-    div[style*="height: 632px;"]{display:none !important}
-    div[style*="height: 324px;"]{display:none !important}
+    /* ─── Esconde gráfico de barras (qualquer altura), mantém cards de jogo ─── */
+    /* Oculta o wrapper do Recharts quando ele coexiste com o grid de game cards */
+    div:has(> div[style*="grid-template-columns"]) > div:has(.recharts-responsive-container){
+      display:none !important;
+    }
     /* Remove margem do topo dos cards já que o gráfico sumiu */
     div[style*="grid-template-columns: repeat(auto-fill"]{margin-top:0 !important}
 
